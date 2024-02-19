@@ -2,9 +2,12 @@ pipeline {
     agent any
 
     stages {
-        stage('Verify Branch') {
+        stage('Hello') {
             steps {
-                echo "$GIT_BRANCH"
+                sh '''
+                #!/bin/sh
+                echo "Hello World"
+                '''
             }
         }
     }
